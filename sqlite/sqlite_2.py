@@ -29,7 +29,7 @@ def dynamic_data_entry():
               (unix, date, keyword, value))
     conn.commit()
 
-create_table()
+#create_table()
 #data_entry()
 
 for i in range(10):

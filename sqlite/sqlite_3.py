@@ -12,7 +12,7 @@ conn = sqlite3.connect('tutorial.db')
 c = conn.cursor()
 
 def create_table():
-    c.execute('CREATE TABLE IF NOT EXISTS stuffToPlot (unix REAL, datestamp TEST, keyword TEXT, value REAL)')
+    c.execute('CREATE TABLE IF NOT EXISTS stuffToPlot (unix REAL, datestamp TEXT, keyword TEXT, value REAL)')
 
 def data_entry():
     c.execute("INSERT INTO stuffToPlot VALUES (1451255552, '2016-01-02', 'Python', 8)")
@@ -30,13 +30,13 @@ def dynamic_data_entry():
     conn.commit()
 
 def read_from_db():
-    c.execute('SELECT keyword, unix FROM stuffToPlot WHERE unix > 1488762105 AND value=2')
+    c.execute('SELECT * FROM stuffToPlot')
     #===========================================================================
     # data = c.fetchall() # fetchone for single row
     # print(data)
     #===========================================================================
     for row in c.fetchall():
-        print(row[0], row[1])
+        print(row)
 
 #create_table()
 #data_entry()
