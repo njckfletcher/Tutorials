@@ -11,14 +11,14 @@ prime_numbers = [2, 3, 5, 7, 11, 13, 17]
 perfect_squares = (1, 4, 9, 16, 25, 36)
 
 # Display lengths
-print("# Primes = ", len(prime_numbers))
-print("# Squares = ", len(perfect_squares))
+print("# Primes =", len(prime_numbers))
+print("# Squares =", len(perfect_squares))
 
 # Iterate over both sequences
 for p in prime_numbers:
-    print("Prime: ", p)
+    print("Prime:", p)
 for n in perfect_squares:
-    print("Square: ", n)
+    print("Square:", n)
 
 print("List methods")
 print(dir(prime_numbers))
